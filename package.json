@@ -1,0 +1,6 @@
+{
+  "name": "filog-legal",
+  "private": true,
+  "scripts": { "test": "playwright test" },
+  "devDependencies": { "@playwright/test": "^1.64.1" }
+}

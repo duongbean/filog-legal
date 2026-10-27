@@ -5,83 +5,218 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#faf6ef">
-  <title>FiLog Support</title>
-  <meta name="description" content="Help and contact for FiLog, the film roll archive for iPhone.">
+  <title>FiLog — Your film photography logbook</title>
+  <meta name="description" content="FiLog is a film roll logbook for iPhone. Log every roll, link your scans from Apple Photos, browse by film, camera or place, and keep it all in sync with iCloud.">
+  <meta property="og:title" content="FiLog — Your film photography logbook">
+  <meta property="og:description" content="Log every roll, link your scans and find any frame again.">
+  <meta property="og:image" content="https://duongbean.github.io/filog-legal/icon.png">
   <link rel="icon" href="favicon.png">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@600&display=swap">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
-  <header class="hero">
-    <img class="app-icon" src="icon.png" alt="FiLog app icon" width="96" height="96">
-    <p class="eyebrow">FiLog · Support</p>
-    <h1>We've got your rolls.</h1>
-    <p class="lede">Log every film roll, keep your scans in order and find any frame again. Here's how to get help when something doesn't look right.</p>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="./"><img src="icon.png" alt="" width="34" height="34">FiLog</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+        <a class="btn btn-primary" href="#contact">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <div class="film-strip" aria-hidden="true">
-    <div class="frames"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span></div>
-  </div>
-
   <main>
-    <div class="chips" aria-label="Quick facts">
-      <span class="chip" style="--c: var(--gold)"><i></i>Made for film shooters</span>
-      <span class="chip" style="--c: var(--green)"><i></i>English · Tiếng Việt · 한국어</span>
-      <span class="chip" style="--c: var(--blue)"><i></i>No account needed</span>
-    </div>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Film photography logbook</p>
+          <h1>Every roll.<br><span class="gradient-text">Every frame.</span><br>Remembered.</h1>
+          <p class="lede">FiLog keeps the story behind your film: the stock, the camera, the place and the date — together with your scans, beautifully organized on your iPhone.</p>
+          <div class="hero-actions">
+            <span class="badge-soon" aria-label="Coming soon on the App Store">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.65.8-3.34.8-.69 0-1.750-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.670-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.67-2.15.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.33-3.54zM14.17 6.13c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.69-.93 2.69.98.08 1.98-.5 2.59-1.23z"/></svg>
+              <span><small>Coming soon on the</small><strong>App Store</strong></span>
+            </span>
+            <a class="btn btn-ghost" href="#features">Explore features</a>
+          </div>
+          <p class="hero-note">For iPhone · Free · English, Tiếng Việt, 한국어</p>
+        </div>
 
-    <details class="frame" style="--c: var(--gold)" open>
-      <summary>What should I include when I ask for help?</summary>
-      <div class="answer">
-        <p>Your FiLog version, iPhone model and iOS version, what you were doing, and whether it also happens offline. For sync issues, add the status shown in <strong>Settings › iCloud Sync</strong> and whether Photos access is limited or full.</p>
-        <p>Please remove private notes, locations and account details from screenshots. Never send passwords.</p>
+        <div class="phone" role="img" aria-label="Illustration of the FiLog home screen with a list of film rolls">
+          <div class="screen">
+            <div class="app-top"><b>FiLog</b><i></i></div>
+            <div class="app-stat">12 rolls · 384 photos ›</div>
+            <div class="app-search">⌕&nbsp; Search films, cameras, rolls</div>
+            <div class="app-chips"><span>All</span><span>Date</span><span>Film</span><span>Camera</span></div>
+            <div class="roll"><div class="can c1"></div><div><h4>Kodak Portra 400</h4><p>Pentax K1000 · Oct 2026 · Seoul</p><div class="strip"><span class="c1"></span><span class="c5"></span><span class="c2"></span><span class="c7"></span></div></div></div>
+            <div class="roll"><div class="can c3"></div><div><h4>Fujifilm Velvia 50</h4><p>Nikon FM2 · Sep 2026 · Jeju</p><div class="strip"><span class="c3"></span><span class="c8"></span><span class="c4"></span><span class="c3"></span></div></div></div>
+            <div class="roll"><div class="can c6"></div><div><h4>Ilford HP5 Plus 400</h4><p>Olympus OM-1 · Aug 2026 · Hà Nội</p><div class="strip"><span class="c6"></span><span class="c6"></span><span class="c7"></span><span class="c6"></span></div></div></div>
+            <div class="app-new">+ New Roll</div>
+          </div>
+        </div>
       </div>
-    </details>
-
-    <details class="frame" style="--c: var(--red)">
-      <summary>My photos are missing or show as empty frames</summary>
-      <div class="answer">
-        <p>FiLog links to your originals in Apple Photos instead of copying them. Check that the original still exists and that FiLog can access it.</p>
-        <p>Open <strong>Settings › Sync Photos</strong> to check and repair photo links, or relink a single frame from the viewer. On another iPhone, iCloud Photos needs to be on so FiLog can find the same originals.</p>
-      </div>
-    </details>
-
-    <details class="frame" style="--c: var(--green)">
-      <summary>Sync or restore seems stuck</summary>
-      <div class="answer">
-        <p>Make sure you're signed in to iCloud, have iCloud storage available and are online. Then reopen FiLog and check the status in Settings. Roll information that synced earlier comes back with the same Apple Account.</p>
-        <p>FiLog syncs your roll information, not original photo files, older in-app photo copies or custom cover images.</p>
-        <p><strong>Please don't delete FiLog, clear its storage or delete its iCloud data to troubleshoot</strong> — that can remove data that only exists on your iPhone. Contact us first.</p>
-      </div>
-    </details>
-
-    <details class="frame" style="--c: var(--blue)">
-      <summary>How do I move FiLog to a new iPhone?</summary>
-      <div class="answer">
-        <p>Keep <strong>iCloud Sync</strong> on in FiLog and <strong>iCloud Photos</strong> on in iOS. Sign in to the same Apple Account on your new iPhone, install FiLog and allow full Photos access when asked. Your rolls download automatically, and FiLog links your photos again whenever it can find the originals.</p>
-      </div>
-    </details>
-
-    <details class="frame" style="--c: var(--magenta)">
-      <summary>Privacy and deleting data</summary>
-      <div class="answer">
-        <p>Deleting a frame in FiLog never deletes the original in Apple Photos. Deletions sync to your other devices. Turning iCloud Sync off stops syncing but keeps data already in iCloud.</p>
-        <p>Read the full <a href="privacy.html">Privacy Policy</a>.</p>
-      </div>
-    </details>
-
-    <section class="contact">
-      <p class="eyebrow">Frame 36 · Contact</p>
-      <h2>Still stuck? Write to us.</h2>
-      <p>Send a message with what happened and we'll get back to you.</p>
-      <a class="button" href="mailto:bean272003@gmail.com?subject=FiLog%20Support">bean272003@gmail.com</a>
     </section>
 
-    <nav aria-label="Pages"><a href="./" aria-current="page">Support</a><a href="privacy.html">Privacy Policy</a></nav>
-    <footer>FiLog by duongbean</footer>
+    <div class="film-strip" aria-hidden="true">
+      <div class="frames"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span><span>09</span><span>10</span></div>
+    </div>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Features</p>
+          <h2>Everything your film deserves</h2>
+          <p>Built for people who shoot film and want to remember every roll — without spreadsheets or paper notes.</p>
+        </div>
+        <div class="features">
+          <article class="feature" style="--c: var(--gold)">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 6v12M17 6v12M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></div>
+            <h3>Log every roll</h3>
+            <p>Film stock, camera, format, frame count, shooting month, lab and notes — saved in seconds.</p>
+          </article>
+          <article class="feature" style="--c: var(--red)">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></div>
+            <h3>Scans linked, not copied</h3>
+            <p>Add scans straight from Apple Photos. Originals stay where they are, without duplicates filling your iPhone.</p>
+          </article>
+          <article class="feature" style="--c: var(--green)">
+            <div class="icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></div>
+            <h3>Browse your way</h3>
+            <p>Search everything, or group your rolls by date, film, camera or location to find any frame fast.</p>
+          </article>
+          <article class="feature" style="--c: var(--blue)">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2zM4 19a2 2 0 0 1 2-2h12"/></svg></div>
+            <h3>Film &amp; camera library</h3>
+            <p>Popular stocks from Kodak, Fujifilm, Ilford and more are built in. Add your own films and cameras with covers.</p>
+          </article>
+          <article class="feature" style="--c: var(--magenta)">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+            <h3>Shooting statistics</h3>
+            <p>See your most-shot films, favorite cameras, places and activity over time — tap any stat to see its rolls.</p>
+          </article>
+          <article class="feature" style="--c: var(--gold)">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+            <h3>Contact sheets</h3>
+            <p>Turn a roll into a classic contact sheet, then save it to Photos or share it anywhere.</p>
+          </article>
+          <article class="feature" style="--c: var(--red)">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+            <h3>Places on a map</h3>
+            <p>Pin where each roll was shot and revisit your photo walks on the map.</p>
+          </article>
+          <article class="feature" style="--c: var(--green)">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M7 18a5 5 0 0 1-.7-9.95A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7z"/></svg></div>
+            <h3>iCloud Sync</h3>
+            <p>Your rolls sync through your private iCloud and come back after reinstalling or on a new iPhone.</p>
+          </article>
+          <article class="feature" style="--c: var(--blue)">
+            <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+            <h3>Your language, your look</h3>
+            <p>Available in English, Tiếng Việt and 한국어, with light and dark appearance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="how">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2>From loaded roll to archived memories</h2>
+          <p>Three simple steps, from the moment you load the film to the day your scans come back.</p>
+        </div>
+        <div class="steps">
+          <div class="step" style="--c: var(--gold)"><span class="num">STEP 01</span><h3>Load a roll</h3><p>Pick the film and camera, set the date and format. FiLog remembers the details you'd otherwise forget.</p></div>
+          <div class="step" style="--c: var(--magenta)"><span class="num">STEP 02</span><h3>Add your scans</h3><p>When the lab sends your scans, add them from Apple Photos and drag frames into the right order.</p></div>
+          <div class="step" style="--c: var(--blue)"><span class="num">STEP 03</span><h3>Relive &amp; share</h3><p>Browse full-screen, add notes and places, check your stats and share a contact sheet.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="privacy">
+      <div class="container">
+        <div class="privacy-band">
+          <div>
+            <p class="eyebrow">Privacy first</p>
+            <h2>Your rolls stay yours.</h2>
+            <p>FiLog has no accounts, no ads and no tracking. Your data lives on your iPhone and in your own private iCloud — the developer never sees it.</p>
+            <a class="btn btn-warm" href="privacy.html">Read the Privacy Policy</a>
+          </div>
+          <ul>
+            <li style="--c: #f5b700"><i></i>No account to create</li>
+            <li style="--c: #ff5a3c"><i></i>No ads, analytics or tracking</li>
+            <li style="--c: #22c58b"><i></i>No developer servers</li>
+            <li style="--c: #4d8bff"><i></i>Sync through your private iCloud</li>
+            <li style="--c: #e34fb4"><i></i>Originals stay in Apple Photos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow">Contact</p>
+          <h2 class="title">Let's talk film.</h2>
+          <p>Questions, feedback or a feature you'd love to see? Send a message — every note helps make FiLog better.</p>
+          <a class="contact-card" href="mailto:bean272003@gmail.com?subject=FiLog" style="--c: var(--gold)">
+            <span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+            <span><small>Email</small><strong>bean272003@gmail.com</strong></span>
+          </a>
+          <a class="contact-card" href="support.html" style="--c: var(--blue)">
+            <span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5h.01"/></svg></span>
+            <span><small>Help center</small><strong>Support &amp; FAQ</strong></span>
+          </a>
+          <a class="contact-card" href="privacy.html" style="--c: var(--magenta)">
+            <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/></svg></span>
+            <span><small>Your data</small><strong>Privacy Policy</strong></span>
+          </a>
+        </div>
+
+        <form class="form" id="contact-form">
+          <div class="row">
+            <div><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+            <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          </div>
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option>Support</option><option>Feedback</option><option>Feature request</option><option>Privacy</option><option>Other</option>
+          </select>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Tell us what's on your mind…"></textarea>
+          <button class="btn btn-warm" type="submit">Send message</button>
+          <p class="hint">Opens your email app with the message ready to send.</p>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="./"><img src="icon.png" alt="" width="34" height="34">FiLog</a>
+          <p>A logbook for film photographers. Every roll, every frame, remembered.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul><li><a href="#features">Features</a></li><li><a href="#how">How it works</a></li><li><a href="#privacy">Privacy first</a></li></ul>
+        </div>
+        <div>
+          <h4>Help</h4>
+          <ul><li><a href="support.html">Support &amp; FAQ</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="#contact">Contact</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year">2026</span> FiLog by duongbean</span><span>Made for film shooters</span></div>
+    </div>
+  </footer>
+  <script src="site.js?v=4"></script>
 </body>
 </html>

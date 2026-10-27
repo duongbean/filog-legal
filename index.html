@@ -4,37 +4,82 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FiLog Support</title>
-  <meta name="description" content="Help and contact for FiLog, the film roll archive app for iPhone.">
+  <meta name="description" content="Help and contact for FiLog, the film roll archive for iPhone.">
+  <link rel="icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@600&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-  <header>
-    <a class="wordmark" href="./">FiLog</a>
-    <h1>Support</h1>
-    <p class="meta">FiLog helps you log film rolls and keep your scans organized.</p>
+  <header class="hero">
+    <img class="app-icon" src="icon.png" alt="FiLog app icon" width="96" height="96">
+    <p class="eyebrow">FiLog · Support</p>
+    <h1>We've got your rolls.</h1>
+    <p class="lede">Log every film roll, keep your scans in order and find any frame again. Here's how to get help when something doesn't look right.</p>
   </header>
 
-  <div class="card">
-    <p><strong>Contact</strong></p>
-    <p><a href="mailto:bean272003@gmail.com?subject=FiLog%20Support">bean272003@gmail.com</a></p>
+  <div class="film-strip" aria-hidden="true">
+    <div class="frames"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span></div>
   </div>
 
-  <h2>Getting help</h2>
-  <p>Please include your FiLog version, iPhone model, iOS version, what you were doing and whether it also happens offline. For sync issues, include the status shown in FiLog Settings and whether Photos access is limited or full. Remove private notes, locations, account details and images from screenshots before sending them. Never send passwords.</p>
+  <main>
+    <div class="chips" aria-label="Quick facts">
+      <span class="chip" style="--c: var(--gold)"><i></i>Made for film shooters</span>
+      <span class="chip" style="--c: var(--green)"><i></i>English · Tiếng Việt · 한국어</span>
+      <span class="chip" style="--c: var(--blue)"><i></i>No account needed</span>
+    </div>
 
-  <h2>Photos are missing</h2>
-  <p>FiLog links to originals in Apple Photos instead of copying them. Check that the original still exists and that FiLog can access it. In FiLog, open Settings &gt; Sync Photos to check and repair photo links, or relink an unavailable frame. Finding photos on another iPhone also requires iCloud Photos.</p>
+    <details class="frame" style="--c: var(--gold)" open>
+      <summary>What should I include when I ask for help?</summary>
+      <div class="answer">
+        <p>Your FiLog version, iPhone model and iOS version, what you were doing, and whether it also happens offline. For sync issues, add the status shown in <strong>Settings › iCloud Sync</strong> and whether Photos access is limited or full.</p>
+        <p>Please remove private notes, locations and account details from screenshots. Never send passwords.</p>
+      </div>
+    </details>
 
-  <h2>Sync or restore is pending</h2>
-  <p>Check that you are signed in to iCloud, have iCloud storage available and are online, then reopen FiLog and check the sync status in Settings. Roll information that synced earlier can be restored with the same Apple Account. FiLog syncs roll information, not original photo files, older in-app photo copies or custom cover images.</p>
-  <p><strong>Please don't delete FiLog, clear its storage or delete its iCloud data to troubleshoot.</strong> Those actions can remove data that exists only on your device. Contact support first.</p>
+    <details class="frame" style="--c: var(--red)">
+      <summary>My photos are missing or show as empty frames</summary>
+      <div class="answer">
+        <p>FiLog links to your originals in Apple Photos instead of copying them. Check that the original still exists and that FiLog can access it.</p>
+        <p>Open <strong>Settings › Sync Photos</strong> to check and repair photo links, or relink a single frame from the viewer. On another iPhone, iCloud Photos needs to be on so FiLog can find the same originals.</p>
+      </div>
+    </details>
 
-  <h2>Privacy and data controls</h2>
-  <p>In FiLog Settings you can manage permissions, turn iCloud Sync on or off and review storage. Deleting a frame in FiLog never deletes the original in Apple Photos. Deletions sync to your other devices. Turning sync off does not erase data already in iCloud.</p>
-  <p>Read the full <a href="privacy.html">Privacy Policy</a>.</p>
+    <details class="frame" style="--c: var(--green)">
+      <summary>Sync or restore seems stuck</summary>
+      <div class="answer">
+        <p>Make sure you're signed in to iCloud, have iCloud storage available and are online. Then reopen FiLog and check the status in Settings. Roll information that synced earlier comes back with the same Apple Account.</p>
+        <p>FiLog syncs your roll information, not original photo files, older in-app photo copies or custom cover images.</p>
+        <p><strong>Please don't delete FiLog, clear its storage or delete its iCloud data to troubleshoot</strong> — that can remove data that only exists on your iPhone. Contact us first.</p>
+      </div>
+    </details>
 
-  <nav><a href="./">Support</a><a href="privacy.html">Privacy Policy</a></nav>
-</main>
+    <details class="frame" style="--c: var(--blue)">
+      <summary>How do I move FiLog to a new iPhone?</summary>
+      <div class="answer">
+        <p>Keep <strong>iCloud Sync</strong> on in FiLog and <strong>iCloud Photos</strong> on in iOS. Sign in to the same Apple Account on your new iPhone, install FiLog and allow full Photos access when asked. Your rolls download automatically, and FiLog links your photos again whenever it can find the originals.</p>
+      </div>
+    </details>
+
+    <details class="frame" style="--c: var(--magenta)">
+      <summary>Privacy and deleting data</summary>
+      <div class="answer">
+        <p>Deleting a frame in FiLog never deletes the original in Apple Photos. Deletions sync to your other devices. Turning iCloud Sync off stops syncing but keeps data already in iCloud.</p>
+        <p>Read the full <a href="privacy.html">Privacy Policy</a>.</p>
+      </div>
+    </details>
+
+    <section class="contact">
+      <p class="eyebrow">Frame 36 · Contact</p>
+      <h2>Still stuck? Write to us.</h2>
+      <p>Send a message with what happened and we'll get back to you.</p>
+      <a class="button" href="mailto:bean272003@gmail.com?subject=FiLog%20Support">bean272003@gmail.com</a>
+    </section>
+
+    <nav aria-label="Pages"><a href="./" aria-current="page">Support</a><a href="privacy.html">Privacy Policy</a></nav>
+    <footer>FiLog by duongbean</footer>
+  </main>
 </body>
 </html>

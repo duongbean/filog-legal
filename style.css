@@ -1,19 +1,10 @@
 /* Film-stock palette: Portra gold, Ektar red, Fuji green, CineStill blue, Velvia magenta. */
 :root {
-  --bg: #0b0a09; --bg-2: #15130f; --card: rgba(255,255,255,0.045); --card-border: rgba(255,255,255,0.09);
-  --text: #f6f1e9; --muted: #b3aa9c; --soft: #7d7466;
-  --gold: #f5b700; --red: #ff5a3c; --green: #22c58b; --blue: #4d8bff; --magenta: #e34fb4;
-  --grain-opacity: 0.08;
-  color-scheme: dark;
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #fbf5ea; --bg-2: #f3eadb; --card: rgba(255,255,255,0.75); --card-border: rgba(60,40,10,0.10);
-    --text: #1d1813; --muted: #5d5346; --soft: #8a7e6c;
-    --gold: #d99a00; --red: #e2401f; --green: #0f9a68; --blue: #2f6ae6; --magenta: #c4318f;
-    --grain-opacity: 0.05;
-    color-scheme: light;
-  }
+  --bg: #faf6ef; --bg-2: #f3ece0; --card: #ffffff; --card-border: rgba(70,50,20,0.09);
+  --text: #1c1814; --muted: #5f564a; --soft: #8c8172;
+  --gold: #d99a00; --red: #e2401f; --green: #0f9a68; --blue: #2f6ae6; --magenta: #c4318f;
+  --grain-opacity: 0.035;
+  color-scheme: light;
 }
 
 * { box-sizing: border-box; }
@@ -32,7 +23,7 @@ a { color: inherit; }
 /* Hero */
 .hero { position: relative; padding: 72px 20px 56px; text-align: center; isolation: isolate; }
 .hero::before {
-  content: ""; position: absolute; inset: -20% -10% 0; z-index: -1; filter: blur(60px); opacity: 0.55;
+  content: ""; position: absolute; inset: -20% -10% 0; z-index: -1; filter: blur(70px); opacity: 0.32;
   background:
     radial-gradient(40% 50% at 20% 30%, var(--gold), transparent 70%),
     radial-gradient(35% 45% at 80% 25%, var(--magenta), transparent 70%),
@@ -41,7 +32,7 @@ a { color: inherit; }
 }
 .app-icon {
   width: 96px; height: 96px; border-radius: 22px; display: block; margin: 0 auto 22px;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.15), 0 18px 50px -10px rgba(245,183,0,0.55), 0 8px 30px -8px rgba(227,79,180,0.5);
+  box-shadow: 0 20px 45px -18px rgba(30,20,5,0.55), 0 0 0 6px rgba(255,255,255,0.7);
 }
 .eyebrow {
   font: 600 13px/1 "JetBrains Mono", ui-monospace, Menlo, monospace; letter-spacing: 3px; text-transform: uppercase;
@@ -57,8 +48,8 @@ h1 {
 
 /* Decorative film strip with sprocket holes and color frames. */
 .film-strip {
-  margin: 0 0 40px; padding: 14px 0; background: #050505; position: relative;
-  transform: rotate(-1.2deg); box-shadow: 0 16px 40px -20px rgba(0,0,0,0.7);
+  margin: 0 0 44px; padding: 12px 0; background: #1c1814; position: relative;
+  transform: rotate(-1.2deg); box-shadow: 0 18px 40px -22px rgba(30,20,5,0.55);
 }
 .film-strip::before, .film-strip::after {
   content: ""; display: block; height: 10px; margin: 0 0 10px;
@@ -85,6 +76,7 @@ main { max-width: 760px; margin: 0 auto; padding: 0 20px 80px; }
 .chip {
   display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px;
   font-weight: 600; font-size: 15px; background: var(--card); border: 1px solid var(--card-border);
+  box-shadow: 0 4px 14px -10px rgba(60,40,10,0.35);
 }
 .chip i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; background: var(--c); box-shadow: 0 0 12px var(--c); }
 
@@ -92,13 +84,14 @@ main { max-width: 760px; margin: 0 auto; padding: 0 20px 80px; }
 .frame {
   --c: var(--gold);
   position: relative; background: var(--card); border: 1px solid var(--card-border); border-radius: 24px;
+  box-shadow: 0 1px 2px rgba(60,40,10,0.04), 0 10px 30px -18px rgba(60,40,10,0.25);
   padding: 26px 24px 22px; margin: 0 0 18px; overflow: hidden;
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
 }
 .frame::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: var(--c); }
 .frame::after {
   content: ""; position: absolute; right: -60px; top: -60px; width: 160px; height: 160px; border-radius: 50%;
-  background: var(--c); opacity: 0.12; filter: blur(30px); pointer-events: none;
+  background: var(--c); opacity: 0.08; filter: blur(30px); pointer-events: none;
 }
 .frame:nth-of-type(5n+1) { --c: var(--gold); }
 .frame:nth-of-type(5n+2) { --c: var(--red); }
@@ -118,7 +111,7 @@ main { max-width: 760px; margin: 0 auto; padding: 0 20px 80px; }
 /* Contact */
 .contact {
   text-align: center; border-radius: 28px; padding: 34px 24px; margin: 34px 0 0; position: relative; overflow: hidden;
-  background: linear-gradient(135deg, rgba(245,183,0,0.22), rgba(227,79,180,0.22) 50%, rgba(77,139,255,0.22));
+  background: linear-gradient(135deg, rgba(245,183,0,0.16), rgba(227,79,180,0.14) 50%, rgba(77,139,255,0.16)), var(--card);
   border: 1px solid var(--card-border);
 }
 .contact h2 { font-family: "Bricolage Grotesque", "Inter", sans-serif; font-size: 28px; margin: 0 0 6px; }

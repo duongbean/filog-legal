@@ -12,12 +12,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@600&display=swap">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
+  <script src="translations.js?v=5" defer></script>
+  <script src="site.js?v=5" defer></script>
 </head>
 <body>
   <header class="site-header">
     <nav class="container nav" aria-label="Main">
       <a class="brand" href="./"><img src="icon.png" alt="" width="34" height="34">FiLog</a>
+      <div class="language-switcher" role="group" aria-label="Language">
+        <button type="button" data-language="vi" lang="vi" aria-label="Tiếng Việt" aria-pressed="false">VN</button>
+        <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+        <button type="button" data-language="ko" lang="ko" aria-label="한국어" aria-pressed="false">KR</button>
+      </div>
       <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <div class="nav-links">
         <a href="./#features">Features</a>
@@ -106,6 +113,5 @@
       <div class="footer-bottom"><span>© <span id="year">2026</span> FiLog by duongbean</span><span>Made for film shooters</span></div>
     </div>
   </footer>
-  <script src="site.js?v=4"></script>
 </body>
 </html>
